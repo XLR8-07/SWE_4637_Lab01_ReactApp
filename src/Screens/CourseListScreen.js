@@ -9,7 +9,17 @@ const CourseListScreen= (props)=>{
             data = {props.route.params}
             renderItem={
                 function(item){
-                return(<Text style={styles.textStyle}>{item.item.course_code}</Text>)
+                return(
+                <View>
+                    <View style={styles.SemContainer}>
+                        <Text style={styles.semStyle} >{item.item.sem}</Text>
+                    </View>
+
+                    <View style={styles.CourseContainer}>
+                        <Text style={styles.textStyle}>{item.item.key}   {item.item.course_code}</Text>
+                    </View>
+                
+                </View>)
                 }
             }>
 
@@ -21,6 +31,15 @@ const CourseListScreen= (props)=>{
 const styles = StyleSheet.create({
     textStyle: {
         fontSize: 16
+    },
+    semStyle :{
+        fontSize: 30,
+    },
+    SemContainer:{
+        alignItems:'center'
+    },
+    CourseContainer:{
+        alignItems:'center'
     }
 })
 
