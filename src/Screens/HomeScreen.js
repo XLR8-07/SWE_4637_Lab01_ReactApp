@@ -19,13 +19,13 @@ const HomeScreen = (props) =>{
             </View>
             
             <View style={styles.buttonContainer}>
-                <Button color="#bfb4de" style={styles.button} title="Semesterwise Course List" onPress={
+                <Button color="#bfb4de"  title="Semesterwise Course List" onPress={
                     function(){
                         props.navigation.navigate("Semesters");
                     }
                 }>
                 </Button>
-                <Button color="#bfb4de" style={styles.button} title="List of Faculty Members" onPress={
+                <Button color="#bfb4de"  title="List of Faculty Members" onPress={
                     function(){
                         props.navigation.navigate("Faculty Lists");
                     }
